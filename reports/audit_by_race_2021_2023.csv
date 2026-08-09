@@ -1,0 +1,7 @@
+group,sample_size,elevated_cases,recall,weighted_recall,weighted_precision,weighted_false_positive_rate,weighted_roc_auc
+Mexican American,58,22,0.864,0.757,0.514,0.322,0.768
+Non-Hispanic Asian,43,15,0.6,0.636,0.673,0.116,0.774
+Non-Hispanic Black,93,40,0.775,0.725,0.505,0.425,0.729
+Non-Hispanic White,469,122,0.926,0.866,0.332,0.483,0.779
+Other / Multiracial,37,13,0.846,0.593,0.398,0.475,0.625
+Other Hispanic,78,22,0.682,0.572,0.507,0.249,0.752

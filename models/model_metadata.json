@@ -1,0 +1,78 @@
+{
+    "model_name": "GlucoRisk",
+    "version": "2.0.0",
+    "dataset": "NHANES August 2021-August 2023",
+    "model_type": "Survey-weighted Logistic Regression",
+    "decision_threshold": 0.23453970772268737,
+    "target_recall": 0.75,
+    "features": [
+        "age",
+        "bmi",
+        "waist_cm",
+        "avg_systolic_bp",
+        "avg_diastolic_bp",
+        "recreation_met_minutes_week",
+        "sedentary_minutes",
+        "average_sleep_hours",
+        "smoking_status"
+    ],
+    "excluded_sensitive_features": [
+        "sex_code",
+        "race_ethnicity_code"
+    ],
+    "split_sizes": {
+        "training": 3626,
+        "validation": 777,
+        "test": 778
+    },
+    "test_metrics_unweighted": {
+        "accuracy": 0.5976863753213367,
+        "precision": 0.4168421052631579,
+        "recall": 0.8461538461538461,
+        "f1": 0.5585331452750353,
+        "roc_auc": 0.7391905480140774,
+        "brier_score": 0.18062129672030228
+    },
+    "test_metrics_survey_weighted": {
+        "accuracy": 0.6292561236401889,
+        "precision": 0.3894752536569335,
+        "recall": 0.7723140503060254,
+        "f1": 0.5178171457074168,
+        "roc_auc": 0.7349628633900112,
+        "brier_score": 0.1687010616576456
+    },
+    "status": "production",
+    "prediction_target": "Current elevated A1C of 5.7% or higher",
+    "population": "Adults without a confirmed diabetes diagnosis",
+    "test_metrics": {
+        "accuracy": 0.6292561236401889,
+        "precision": 0.3894752536569335,
+        "recall": 0.7723140503060254,
+        "f1": 0.5178171457074168,
+        "roc_auc": 0.7349628633900112,
+        "brier_score": 0.1687010616576456
+    },
+    "calibration": {
+        "brier_score": 0.181,
+        "baseline_brier_score": 0.21
+    },
+    "audit_summary": {
+        "sex_weighted_recall_range": [
+            0.756,
+            0.79
+        ],
+        "race_weighted_recall_range": [
+            0.572,
+            0.866
+        ],
+        "sensitive_features_used": false
+    },
+    "limitations": [
+        "Not a medical diagnosis",
+        "Not clinically validated",
+        "Trained using cross-sectional survey data",
+        "Does not predict future diabetes",
+        "Performance varies across demographic groups",
+        "Scores should be interpreted as screening estimates"
+    ]
+}
