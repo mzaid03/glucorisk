@@ -30,18 +30,18 @@ type PredictionResult = {
 };
 
 const initialForm: FormState = {
-  age: "45",
-  heightFeet: "5",
-  heightInches: "8",
-  weightPounds: "194",
-  waistInches: "39.4",
-  systolic: "132",
-  diastolic: "84",
-  moderateMinutes: "150",
-  vigorousMinutes: "0",
-  sedentaryHours: "8",
-  sleepHours: "7",
-  smokingStatus: "0",
+  age: "",
+  heightFeet: "",
+  heightInches: "",
+  weightPounds: "",
+  waistInches: "",
+  systolic: "",
+  diastolic: "",
+  moderateMinutes: "",
+  vigorousMinutes: "",
+  sedentaryHours: "",
+  sleepHours: "",
+  smokingStatus: "",
 };
 
 export default function Home() {
@@ -407,6 +407,9 @@ export default function Home() {
                     )
                   }
                 >
+                  <option value ="" disabled>
+                    Select smoking status
+                  </option>
                   <option value="0">Never smoked</option>
                   <option value="1">Former smoker</option>
                   <option value="2">Current smoker</option>
